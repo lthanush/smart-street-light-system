@@ -11,9 +11,9 @@
 #include <OneWire.h>
 #include <LiquidCrystal_I2C.h>
 
-#define BLYNK_TEMPLATE_ID "TMPL3WIfQRwwC"
-#define BLYNK_TEMPLATE_NAME "faultcheck"
-#define BLYNK_AUTH_TOKEN "ZdxYLtBPY5WqKBWBX1hV5tP8n4KzUaWX"
+#define BLYNK_TEMPLATE_ID "YOUR_BLYNK_TEMPLATE_ID"
+#define BLYNK_TEMPLATE_NAME "YOUR_BLYNK_TEMPLATE_NAME"
+#define BLYNK_AUTH_TOKEN "YOUR_BLYNK_TOKEN"
 
 
 
@@ -21,12 +21,12 @@
 LiquidCrystal_I2C lcd(0x27, 16, 2);  // set the LCD address to 0x3F for a 16 chars and 2 line display
 
 
-char ssid[] = "Project";
-char pass[] = "project1234";
+char ssid[] = "YOUR_WIFI_NAME";
+char pass[] = "YOUR_WIFI_PASSWORD";
 
 //sender phone number with country code.
 //not gsm module phone number
-const String PHONE = "+919449764333";
+const String PHONE = "YOUR_PHONE_NUMBER";
 
 //GSM Module RX pin to ESP32 2
 //GSM Module TX pin to ESP32 4
@@ -95,10 +95,10 @@ void loop() {
     // Display
     lcd.clear();          // Clear the LCD
     lcd.setCursor(0, 0);  // Set cursor to the first row
-    lcd.print("Ploe 1 Light off");
+    lcd.print("Pole 1 Light off");
     delay(500);
 
-    sendAlertSMS("Ploe 1 Light off");
+    sendAlertSMS("Pole 1 Light off");
   }
 
 
@@ -113,10 +113,10 @@ void loop() {
     // Display
     lcd.clear();          // Clear the LCD
     lcd.setCursor(0, 0);  // Set cursor to the first row
-    lcd.print("Ploe 2 Light off");
+    lcd.print("Pole 2 Light off");
     delay(500);
 
-    sendAlertSMS("Ploe 2 Light off");
+    sendAlertSMS("Pole 2 Light off");
   }
 
 
@@ -136,10 +136,10 @@ void loop() {
     // Display
     lcd.clear();          // Clear the LCD
     lcd.setCursor(0, 0);  // Set cursor to the first row
-    lcd.print("Ploe 1 on Fire");
+    lcd.print("Pole 1 on Fire");
     delay(500);
 
-    sendAlertSMS("Ploe 1 on Fire");
+    sendAlertSMS("Pole 1 on Fire");
   }
 
   if (flame_state2 == HIGH) {
@@ -152,10 +152,10 @@ void loop() {
     // Display
     lcd.clear();          // Clear the LCD
     lcd.setCursor(0, 0);  // Set cursor to the first row
-    lcd.print("Ploe 2 on Fire");
+    lcd.print("Pole 2 on Fire");
     delay(500);
 
-    sendAlertSMS("Ploe 2 on Fire");
+    sendAlertSMS("Pole 2 on Fire");
   }
 
 
@@ -174,10 +174,10 @@ void loop() {
     Blynk.virtualWrite(V4, 1);
     lcd.clear();          // Clear the LCD
     lcd.setCursor(0, 0);  // Set cursor to the first row
-    lcd.print("Ploe 1 Tilted");
+    lcd.print("Pole 1 Tilted");
     delay(500);
 
-    sendAlertSMS("Ploe 1 Tilted");
+    sendAlertSMS("Pole 1 Tilted");
   }
 
 
@@ -192,10 +192,10 @@ void loop() {
     Blynk.virtualWrite(V5, 1);
     lcd.clear();          // Clear the LCD
     lcd.setCursor(0, 0);  // Set cursor to the first row
-    lcd.print("Ploe 2 Tilted");
+    lcd.print("Pole 2 Tilted");
     delay(500);
 
-    sendAlertSMS("Ploe 2 Tilted");
+    sendAlertSMS("Pole 2 Tilted");
   }
 
   delay(200);
