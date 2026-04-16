@@ -19,11 +19,11 @@ This is an embedded IoT project using ESP32 that detects faults in street lights
 - GSM (SIM800)
 
 ## ⚙️ Components
-- LDR Sensor
-- Flame Sensor
-- Tilt Sensor
-- LCD Display
-- GSM Module
+- LM393 Photosensitive Light-Dependent Control Sensor Module
+-  KY-026 Flame Sensor Module
+- SW-520D Tilt Sensor Module
+- LCD Display (16*2 pins) 
+- GSM Module Sim800l
 
 ## 📲 Output
 - Sends alert messages
